@@ -45,13 +45,21 @@ export default function AboutPage() {
               className="space-y-6"
             >
               <p className="text-gray-300 leading-relaxed">
+<<<<<<< HEAD
                 Waddup I'm <span className="font-semibold text-white">TRANQUiLiTY</span>, a music producer, artist and audio engineer with a passion for crafting immersive soundscapes and impactful rhythms. Over the years I've developed a versatile skill set across <span className="text-white font-medium">Hip-Hop, Trap, Drill, R&B, Afrobeats, Pop, EDM, and Alternative</span>—blending organic textures with modern production techniques.
+=======
+                Waddup I&apos;m <span className="font-semibold text-white">TRANQUiLiTY</span>, a music producer, artist and audio engineer with a passion for crafting immersive soundscapes and impactful rhythms. Over the years I&apos;ve developed a versatile skill set across <span className="text-white font-medium">Hip-Hop, Trap, Drill, R&amp;B, Afrobeats, Pop, EDM, and Alternative</span>—blending organic textures with modern production techniques.
+>>>>>>> pre-restoration-base
               </p>
               <p className="text-gray-300 leading-relaxed">
                 My journey started with experimenting in a simple home setup, evolving into a refined workflow focused on clarity, depth, and emotion. I specialize in <span className="text-white font-medium">beat production, vocal processing, arrangement, sound design, mixing, and mastering</span>. Every track is approached with intention—balancing technical precision with artistic feel.
               </p>
               <p className="text-gray-300 leading-relaxed">
+<<<<<<< HEAD
                 I believe in building collaborative relationships with artists—helping shape ideas from raw demos to polished, release-ready records. Whether it's enhancing a performance, sculpting atmosphere, or delivering final masters, the goal is always the same: to make the music feel alive.
+=======
+                I believe in building collaborative relationships with artists—helping shape ideas from raw demos to polished, release-ready records. Whether it&apos;s enhancing a performance, sculpting atmosphere, or delivering final masters, the goal is always the same: to make the music feel alive.
+>>>>>>> pre-restoration-base
               </p>
               <p className="text-gray-300 leading-relaxed">
                 Alongside my studio work, I earned a <span className="text-white font-medium">minor in Music at Binghamton University</span>, strengthening my foundation in theory, ear training, and composition. I also served as president of a campus music club, organizing collaborative sessions, events, and peer development—an experience that sharpened both my leadership and creative direction.
@@ -102,7 +110,11 @@ export default function AboutPage() {
                     { href: 'https://www.youtube.com/channel/UCf-Q6WLLL8iKtBP_4QO_zQg?view_as=subscriber', label: 'YouTube', icon: FaYoutube, color: 'hover:text-red-500' },
                     { href: 'https://www.instagram.com/by.tranquility/', label: 'Instagram', icon: FaInstagram, color: 'hover:text-pink-500' },
                     { href: 'https://www.tiktok.com/@by.tranquility', label: 'TikTok', icon: FaTiktok, color: 'hover:text-gray-300' }
+<<<<<<< HEAD
                   ].map((s, i) => (
+=======
+                  ].map((s) => (
+>>>>>>> pre-restoration-base
                     <motion.a
                       key={s.label}
                       href={s.href}

@@ -145,6 +145,19 @@ export default function Home() {
         {/* Removed placeholder instructional list and external template buttons */}
       </div>
       {/* Footer removed as requested */}
+<<<<<<< HEAD
+=======
+      <footer className="relative z-10 border-t border-white/10 bg-black/60 backdrop-blur mt-10">
+        <div className="max-w-6xl mx-auto px-6 py-8 text-center text-xs text-gray-400 space-y-3">
+          <p className="tracking-wide">Deployed continuously via Vercel – push to main to publish.</p>
+          <p>
+            Need to redeploy? <span className="text-gray-300">Commit &amp; push</span> or trigger a
+            {' '}<code className="bg-white/5 px-1.5 py-0.5 rounded">Redeploy</code> from the Vercel dashboard.
+          </p>
+          <p className="opacity-70">© {new Date().getFullYear()} TRANQUiLiTY</p>
+        </div>
+      </footer>
+>>>>>>> pre-restoration-base
     </>
   );
 }
