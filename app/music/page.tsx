@@ -245,7 +245,7 @@ const genreDetails: Record<string, Genre> = {
   },
   'Afrobeats/Caribbean': {
     name: 'Afro-Caribbean Music Production',
-    description: 'Bringing the vibrant sounds of the Caribbean to life with modern production techniques.',
+    description: 'Bringing the vibrant sounds of the African diaspora to life with modern production techniques.',
     services: ['Percussion Programming', 'Vocal Tuning', 'Mixing & Mastering'],
     pricing: 'Starting at $300 per track',
     tracks: SAMPLE_TRACKS.afrocarribean
@@ -257,9 +257,9 @@ const genreDetails: Record<string, Genre> = {
     pricing: 'Starting at $200 per track',
     tracks: SAMPLE_TRACKS.pop
   },
-  'EDM': {
-    name: 'EDM Production',
-    description: 'High-energy EDM production with a focus on catchy melodies and driving beats.',
+  'Electronic': {
+    name: 'Electronic Music Production',
+    description: 'High-energy Electronic production with a focus on catchy melodies and driving beats.',
     services: ['Beat Programming', 'Sound Design', 'Arrangement', 'Mixdown'],
     pricing: 'Starting at $200 per track',
     tracks: [
@@ -353,7 +353,7 @@ export default function MusicPage() {
             </div>
           </div>
 
-          <h1 className="text-4xl md:text-5xl font-bold mb-8 text-center"> My Production</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-8 text-center"> My Productions</h1>
 
           {/* Genre Categories */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-12">
@@ -366,7 +366,7 @@ export default function MusicPage() {
                 onClick={() => setSelectedGenre(genre)}
               >
                 <h3 className="text-xl font-semibold mb-2">{genre}</h3>
-                <p className="text-gray-400">Explore our {genre.toLowerCase()} productions</p>
+                <p className="text-gray-400">Explore {genre.toLowerCase()} productions</p>
               </motion.div>
             ))}
           </div>

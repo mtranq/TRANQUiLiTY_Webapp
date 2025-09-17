@@ -43,7 +43,7 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
               </div>
-              <span className="mt-2 block text-xs tracking-wide text-gray-300 uppercase opacity-80 group-hover:opacity-100">Latest Release</span>
+              <span className="mt-2 block text-xs tracking-wide text-gray-300 uppercase opacity-80 group-hover:opacity-100">CLICK HERE - Latest Release</span>
             </Link>
             <h1 className="text-5xl md:text-7xl font-bold mb-4 font-[family-name:var(--font-archivo-black)]">
               TRANQUiLiTY
