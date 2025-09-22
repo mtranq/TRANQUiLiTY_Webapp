@@ -285,90 +285,123 @@ export default function MusicPage() {
       <Navigation />
       <div className="pt-20 min-h-screen px-4">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-8 text-center">My Music</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">My Music</h1>
           
           {/* Music Section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            {/* Spotify Playlist */}
-            <div className="bg-gray-800 rounded-lg p-4">
-              <h2 className="text-2xl font-semibold mb-4">Latest Release</h2>
-              <div className="w-full">
-                <iframe 
-                  data-testid="embed-iframe" 
-                  style={{ borderRadius: '12px' }}
-                  src="https://open.spotify.com/embed/track/0d7Z105K4L8JDe6vIJz3no?utm_source=generator" 
-                  width="100%" 
-                  height="400" 
-                  frameBorder="0" 
-                  allowFullScreen 
-                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                  loading="lazy"
-                />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            {/* Spotify Latest Release - enhanced frame */}
+            <div className="space-y-2">
+              <h2 className="text-lg font-semibold flex items-center gap-2 leading-tight">
+                <span className="inline-block w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+                Latest Release
+              </h2>
+              <div className="group relative">
+                <div className="rounded-xl p-[1.5px] bg-gradient-to-br from-red-700/40 via-pink-700/25 to-purple-700/40 shadow-lg shadow-black/40 group-hover:shadow-red-900/40 transition-shadow">
+                  <div className="rounded-[11px] overflow-hidden bg-black">
+                    <iframe
+                      data-testid="embed-iframe"
+                      title="Spotify Latest Release"
+                      width="100%"
+                      height="152"
+                      style={{ border: '0' }}
+                      src="https://open.spotify.com/embed/track/0d7Z105K4L8JDe6vIJz3no?utm_source=generator&theme=0"
+                      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+                <div className="flex justify-end pt-1 pr-0.5 text-[10px] text-gray-500">
+                  <a
+                    href="https://open.spotify.com/track/0d7Z105K4L8JDe6vIJz3no"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-red-400 hover:text-red-300 transition-colors"
+                  >Open on Spotify →</a>
+                </div>
               </div>
             </div>
 
-            {/* SoundCloud Tracks */}
-            <div className="bg-gray-800 rounded-lg p-4">
-              <h2 className="text-2xl font-semibold mb-4">Featured Tracks</h2>
-              <div className="w-full">
-                <iframe 
-                  width="100%" 
-                  height="400" 
-                  scrolling="no" 
-                  frameBorder="no" 
-                  allow="autoplay" 
-                  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/2068620114%3Fsecret_token%3Ds-c1unCnEYCco&color=%23201b15&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
-                />
-                <div style={{ 
-                  fontSize: '10px', 
-                  color: '#cccccc', 
-                  lineBreak: 'anywhere',
-                  wordBreak: 'normal',
-                  overflow: 'hidden',
-                  whiteSpace: 'nowrap',
-                  textOverflow: 'ellipsis', 
-                  fontFamily: 'Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif',
-                  fontWeight: 100
-                }}>
-                  <a 
-                    href="https://soundcloud.com/by_tranquility" 
-                    title="TRANQUiLiTY" 
+            {/* SoundCloud Featured Tracks - restyled */}
+            <div className="space-y-2">
+              <h2 className="text-lg font-semibold leading-tight">Featured Tracks</h2>
+              <div className="group relative">
+                <div className="rounded-xl p-[1.5px] bg-gradient-to-br from-orange-600/40 via-amber-500/25 to-pink-600/40 shadow-lg shadow-black/40 group-hover:shadow-orange-900/40 transition-shadow">
+                  <div className="rounded-[11px] overflow-hidden bg-black/90 backdrop-blur-sm">
+                    <iframe
+                      title="SoundCloud Featured Tracks"
+                      width="100%"
+                      height="360"
+                      scrolling="no"
+                      frameBorder="no"
+                      allow="autoplay"
+                      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/2068620114%3Fsecret_token%3Ds-c1unCnEYCco&color=%23201b15&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+                    />
+                  </div>
+                </div>
+                <div className="flex justify-end pt-1 pr-0.5 text-[10px] text-gray-500 space-x-2">
+                  <a
+                    href="https://soundcloud.com/by_tranquility"
                     target="_blank"
-                    rel="noopener noreferrer" 
-                    style={{ color: '#cccccc', textDecoration: 'none' }}
-                  >
-                    TRANQUiLiTY
-                  </a> · 
-                  <a 
-                    href="https://soundcloud.com/by_tranquility/sets/featured-tracks/s-c1unCnEYCco" 
-                    title="Featured Tracks" 
+                    rel="noopener noreferrer"
+                    className="hover:text-orange-300 transition-colors"
+                  >Artist →</a>
+                  <a
+                    href="https://soundcloud.com/by_tranquility/sets/featured-tracks/s-c1unCnEYCco"
                     target="_blank"
-                    rel="noopener noreferrer" 
-                    style={{ color: '#cccccc', textDecoration: 'none' }}
-                  >
-                    Featured Tracks
-                  </a>
+                    rel="noopener noreferrer"
+                    className="hover:text-orange-300 transition-colors"
+                  >Open Playlist →</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <h1 className="text-4xl md:text-5xl font-bold mb-8 text-center"> My Productions</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">My Productions</h1>
 
-          {/* Genre Categories */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-12">
-            {Object.keys(genreDetails).map((genre) => (
-              <motion.div
-                key={genre}
-                className="bg-gray-800 hover:bg-gray-700 rounded-lg p-6 cursor-pointer transition-colors"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                onClick={() => setSelectedGenre(genre)}
-              >
-                <h3 className="text-xl font-semibold mb-2">{genre}</h3>
-                <p className="text-gray-400">Explore {genre.toLowerCase()} productions</p>
-              </motion.div>
-            ))}
+          {/* Genre Categories (enhanced for higher click-through) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mb-12">
+            {Object.keys(genreDetails).map((genre, idx) => {
+              const g = genreDetails[genre];
+              return (
+                <motion.button
+                  key={genre}
+                  type="button"
+                  onClick={() => setSelectedGenre(genre)}
+                  whileHover={{ scale: 1.04, y: -2 }}
+                  whileTap={{ scale: 0.98 }}
+                  initial={{ opacity: 0, y: 14 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.05 * idx }}
+                  className="group relative rounded-xl overflow-hidden text-left focus:outline-none focus:ring-2 focus:ring-red-500/70 focus:ring-offset-2 focus:ring-offset-black"
+                >
+                  {/* Glow / gradient frame */}
+                  <span className="pointer-events-none absolute inset-0 rounded-xl bg-gradient-to-br from-red-600/30 via-pink-600/20 to-purple-700/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <span className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-white/10 group-hover:ring-red-400/40 transition-colors" />
+                  <div className="relative z-10 p-6 h-full flex flex-col">
+                    <div className="mb-4 flex items-start justify-between gap-2">
+                      <h3 className="text-lg font-semibold leading-snug group-hover:text-white tracking-wide">
+                        {genre}
+                      </h3>
+                      <span className="text-[10px] uppercase tracking-wider text-gray-400 group-hover:text-red-300 transition-colors">Open</span>
+                    </div>
+                    <p className="text-sm text-gray-400 line-clamp-3 mb-4 group-hover:text-gray-300 transition-colors">
+                      {g.description}
+                    </p>
+                    <div className="mt-auto pt-4">
+                      <div className="flex justify-center">
+                        <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium bg-gradient-to-r from-red-600 via-pink-600 to-purple-700 text-white shadow-lg shadow-red-900/30 group-hover:shadow-red-700/40 group-hover:from-red-500 group-hover:via-pink-500 group-hover:to-purple-600 transition-all duration-300">
+                          View Tracks
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" /></svg>
+                        </span>
+                      </div>
+                    </div>
+                    {/* Gradient overlay for subtle depth */}
+                    <span className="pointer-events-none absolute inset-0 rounded-xl bg-gradient-to-tr from-black/40 via-black/10 to-transparent" />
+                    <span className="pointer-events-none absolute inset-0 rounded-xl bg-black/30 backdrop-blur-sm opacity-0 group-hover:opacity-40 transition-opacity" />
+                  </div>
+                </motion.button>
+              );
+            })}
           </div>
 
           {/* Modal */}
